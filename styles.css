@@ -413,11 +413,86 @@ h4 {
     font-size: 0.9rem;
 }
 
-/* Floating CTA with Pulse */
-.floating-cta {
+/* Contact Section */
+.contact-section {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.contact-box {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.line-qr {
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 3px solid white;
+}
+
+.btn-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #00C300, #009900);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 195, 0, 0.4);
+    transition: var(--transition);
+}
+
+.btn-line:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 195, 0, 0.6);
+}
+
+.contact-phone {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.contact-phone a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.contact-phone strong {
+    font-size: 1.6rem;
+}
+
+/* Floating CTA Group */
+.floating-cta-group {
     position: fixed;
     bottom: 30px;
     right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+    align-items: flex-end;
+}
+
+.floating-cta {
     background: linear-gradient(135deg, var(--secondary), #2e7d32);
     color: white;
     border-radius: 50px;
@@ -425,16 +500,23 @@ h4 {
     display: flex;
     align-items: center;
     box-shadow: 0 10px 25px rgba(76, 175, 80, 0.4);
-    z-index: 9999;
     text-decoration: none;
     transition: var(--transition);
+}
+
+.phone-cta {
     animation: pulse-green 2s infinite;
+}
+
+.line-cta {
+    background: linear-gradient(135deg, #00C300, #009900);
+    box-shadow: 0 10px 25px rgba(0, 195, 0, 0.4);
+    justify-content: center;
 }
 
 .floating-cta:hover {
     transform: translateY(-5px) scale(1.05);
     animation: none;
-    box-shadow: 0 15px 35px rgba(76, 175, 80, 0.6);
 }
 
 .cta-content {
